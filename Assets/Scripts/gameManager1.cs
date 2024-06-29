@@ -26,14 +26,14 @@ public class gameManager1 : MonoBehaviour
             { "B2", GameObject.Find("B2").transform.position }
         };
 
-        // 将玩家放在A0位置
+        // Place the KURAGE at position A0. 
         player.transform.position = points["A0"];
     }
 
     // Update is called once per frame
     void Update()
     {
-        // 检查是否按下了Enter键
+        // Check if the Enter key is pressed.
         if (Input.GetKeyDown(KeyCode.Return))
         {
             OnSubmit();
@@ -52,7 +52,7 @@ public class gameManager1 : MonoBehaviour
             hintText.text = "起点と終点以外の点を入力することができますよ。";
             MovePlayer(new List<string> { "A0", "A1", "A3" });
         }
-        inputField.text = ""; // 清空输入框
+        inputField.text = ""; // Clear the input field.
     }
 
     void MovePlayer(List<string> path)
